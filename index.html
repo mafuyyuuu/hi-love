@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>it's a(door)able</title>
+	<meta name="description" content="a one-minute minigame."/>
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<meta itemprop="name" content="it's a(door)able">
+	<meta itemprop="description" content="a one-minute minigame.">
+	<meta itemprop="image" content="http://ncase.me/door/thumbnail.png">
+
+	<meta property="og:title" content="it's a(door)able">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://ncase.me/door/">
+	<meta property="og:image" content="http://ncase.me/door/thumbnail.png">
+	<meta property="og:description" content="a one-minute minigame.">
+	<meta property="og:site_name" content="it's a(door)able">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="../valentines-2026/css/index.css">
+
+	<style>
+		body {
+
+			background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+
+
+			font-family: 'Poppins', sans-serif;
+
+			text-align: center;
+		}
+
+		/* THE MAIN GLASS CONTAINER */
+		.date-details {
+			/* 1. The see-through background gradient */
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.15));
+
+			/* 2. The blur magic */
+			backdrop-filter: blur(15px);
+			-webkit-backdrop-filter: blur(15px);
+
+			/* 3. The glassy border */
+			border: 1px solid rgba(255, 255, 255, 0.5);
+
+			/* 4. Soft shadow */
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+
+			/* Other layout styles */
+			padding: 30px;
+			border-radius: 20px;
+			max-width: 450px;
+			margin: 20px auto;
+			text-align: left;
+			color: #333;
+		}
+
+		.date-details h2 {
+			text-align: center;
+			color: #d81b60;
+			margin-top: 0;
+			margin-bottom: 25px;
+			font-size: 24px;
+			font-weight: 700; /* Bold Poppins */
+			text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+		}
+
+		.detail-card {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 20px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+		}
+
+		.detail-card:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+
+		.icon {
+			font-size: 24px;
+			margin-right: 18px;
+			min-width: 35px;
+			text-align: center;
+			filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+		}
+
+		.detail-content h3 {
+			margin: 0 0 3px 0;
+			font-size: 16px;
+			color: #c2185b; /* Deep pink */
+			font-weight: 600; /* Semi-Bold */
+		}
+
+		.detail-content p {
+			margin: 0;
+			font-size: 14px;
+			line-height: 1.5;
+			font-weight: 400;
+		}
+
+		.sub-text {
+			font-size: 12px;
+			color: #666;
+			margin-top: 4px !important;
+			font-style: italic;
+			font-weight: 300;
+		}
+	</style>
+</head>
+<body>
+
+<div id="loading"><div>LOADING</div></div>
+
+<div id="whole_container">
+
+	<div id="screen_one">
+		<canvas id="canvas_intro"></canvas>
+	</div>
+
+	<div id="screen_two">
+		<div id="canvas_container">
+
+			<canvas id="canvas_1" width="300" height="380"></canvas>
+			<canvas id="canvas_2" width="300" height="380"></canvas>
+			<canvas id="canvas_3" width="300" height="380" style="margin:0"></canvas>
+
+			<div id="valentines_text"></div>
+			<div id="rewind_text">rewinding...</div>
+			<div id="replay_text">playing back...</div>
+
+		</div>
+	</div>
+	<div id="screen_three">
+
+		<div id="end_container">
+
+			<span style="font-size:38px; display:block; margin-bottom:10px; color: #d81b60; font-weight: 700;">Will You Be My Valentine?</span>
+
+			<div class="date-details">
+				<h2>Our Weekend Plan 💝</h2>
+
+				<div class="detail-card">
+					<span class="icon">📅</span>
+					<div class="detail-content">
+						<h3>When</h3>
+						<p>Feb 14 - 15, 2026 (Sat-Sun)</p>
+						<p class="sub-text">Meet up time: 1:00 PM</p>
+					</div>
+				</div>
+
+				<div class="detail-card">
+					<span class="icon">📍</span>
+					<div class="detail-content">
+						<h3>Where</h3>
+						<p>MOA Complex & Arena</p>
+						<p class="sub-text">Pasay City</p>
+					</div>
+				</div>
+
+				<div class="detail-card">
+					<span class="icon">🎟️</span>
+					<div class="detail-content">
+						<h3>The Itinerary</h3>
+						<p>Day 1: Staycation & Dinner Date</p>
+						<p>Day 2: Live Volleyball Game! 🏐</p>
+					</div>
+				</div>
+
+				<div class="detail-card">
+					<span class="icon">👔</span>
+					<div class="detail-content">
+						<h3>Outfit Guide</h3>
+						<p><strong>Sat:</strong> Smart Casual (Dinner)</p>
+						<p><strong>Sun:</strong> Comfy/Sporty (Game)</p>
+						<p class="sub-text">P.S. You might want to bring a jacket.</p>
+					</div>
+				</div>
+
+				<div class="detail-card">
+					<span class="icon">📝</span>
+					<div class="detail-content">
+						<h3>Notes</h3>
+						<p>Accommodation & Tickets covered.</p>
+						<p>Just bring yourself! 💖</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+<script src="js/Key.js"></script>
+<script src="js/game.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/soundjs-0.6.0.min.js"></script>
+
+<script>
+	//STAGE = 4;
+</script>
