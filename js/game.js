@@ -743,7 +743,7 @@ function iHeartYou(){
 	if(window.location.hash){
 		vtext.textContent = encryptString(decodeURIComponent(window.location.hash).substring(1));
 	}else{
-		vtext.textContent = "Happy Valentine's Day, my loveee! Wait a second...";
+		vtext.textContent = "Happy Valentine's Day, my loveee! Will you be my Valentine? <3";
 	}
 
 	setTimeout(function(){
